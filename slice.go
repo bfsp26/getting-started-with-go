@@ -19,9 +19,9 @@ func main() {
 		if err == nil {
 			numberI, _ := strconv.Atoi(number)
 			numbers = append(numbers, numberI)
+			fmt.Println(len(numbers))
+			sort.Ints(numbers)
+			fmt.Printf("Sorted slice: %d\n", numbers[sliceSize:])
 		}
 	}
-	numbers = numbers[sliceSize : len(numbers)-1]
-	sort.Ints(numbers)
-	fmt.Printf("Slice: %d", numbers)
 }
